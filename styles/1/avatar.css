@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+body{
+	width: auto;
+}
+#avatar{
+	width: 90%;
+	margin: 10px auto;
+	height: 30px;
+	text-align:center;
+	border: 1px solid #ccc;
+}
+#avatar dl{
+	width: 90%;
+	margin: 20px auto;
+}
+#avatar dl dd{
+	width: 128px;
+	text-align: center;
+	float: left;
+	margin: 10px 12px;
+}

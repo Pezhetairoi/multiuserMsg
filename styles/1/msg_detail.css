@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+#settings_main dl{
+	width: 90%;
+	margin: 10px auto;
+	border-bottom: 1px dashed #ccc;
+}
+
+#settings_main dl dd{
+	text-indent: 10px;
+	background: #aaa;
+	margin: 10px 0;
+	font-family: Tahoma;
+}
+
+#settings_main dl dd p{
+	letter-spacing: 1.5px;
+	border-bottom: 1px dashed #ccc;
+	margin: 4px 0;
+	background:#fff;
+}
+#settings_main dl input{
+	margin-left: 4px;
+}

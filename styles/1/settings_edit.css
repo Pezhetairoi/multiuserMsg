@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+#settings{
+	width: auto;
+	height: 600px;
+	border: 1px solid #ccc;
+	font-size: 12px;
+}
+
+#settings_sidebar{
+	border: 1px dashed #ccc;
+	width: 300px;
+	height: 500px;
+	margin: 15px;
+	float: left;
+}
+
+#settings_main{
+	border: 1px dashed #ccc;
+	width: 590px;
+	height: 500px;
+	margin: 15px;
+	float: right;
+}
+
+#settings_sidebar dl{
+	background: red;
+	height: 40px;
+	line-height: 40px;
+	margin: 15px auto;
+	width: 250px;
+}
+#settings_sidebar dl dt{
+	background: #eef;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin: 15px auto;
+	width: 250px;
+}
+#settings_sidebar dl dd{
+	
+	height: 40px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	margin: 15px auto;
+	width: 250px;
+	background: #eee;
+}
+#settings_sidebar dl dd a{	
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+#settings_sidebar dl dd a:hover{	
+	background: #ccc;
+}
+
+#settings_main dl{
+	margin: 15px auto;
+	width: 550px;
+	font-size: 15px;
+}
+#settings_main dl dd{
+	padding: 12px 0;
+	border-bottom: 1px dashed #888;
+}
+
+#settings_main dl dd input{
+	border: 1px dashed #888;
+}
+#settings_main dl dd input.passcode{
+	width: 60px;
+	height: 20px;
+}
+#settings_main dl dd img #code{
+	position: relative;
+	top: 1px;
+	cursor: pointer;
+}
+#settings_main dl dd input.submit{
+	width: 80px;
+	height: 20px;
+	border: 0px solid #3e3;
+	cursor: pointer;
+}
+input[type="radio"]{
+	vertical-align: middle;
+	width:50px;
+	height: 15px;

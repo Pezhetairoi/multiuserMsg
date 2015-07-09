@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+#friend{
+	width:auto;
+	height: 600px;	
+}
+
+#friend h2{
+	text-indent: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #222;
+}
+
+#friend dl{
+	width: 200px;
+	float: left;
+	margin: 10px 0 20px 40px;
+	background-color: #999;
+}
+
+#friend dl dt{
+	width: 200px;
+}
+#friend dl dt img{
+	margin: 0 auto;
+	display: block;
+}
+
+#friend dl dd{
+	text-align: left;
+	text-indent: 16px;
+	font-size: 10px;
+	line-height:20px;
+	letter-spacing: 1.4px;
+	width: 100px;
+	margin-top:5px;
+	float: left;
+}
+#friend dl dd a{
+	text-decoration: none;
+}
+#friend dl dd.name{
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	color: orange;
+	float: none;
+	width: 180px;
+}
+#friend dl dd.msg{
+	background: url(../../images/x1.gif) no-repeat left center;
+}
+#friend dl dd.comment{
+	background: url(../../images/x2.gif) no-repeat left center;
+}
+#friend dl dd.friend{
+	background: url(../../images/x3.gif) no-repeat left center;
+}
+#friend dl dd.flower{
+	background: url(../../images/x4.gif) no-repeat left center;
+}
+

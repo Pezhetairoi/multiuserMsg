@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+#register{
+	width:auto;
+	height: 600px;	
+	
+}
+
+#register h2{
+	text-indent: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #222;
+}
+dl{
+	text-indent: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+dt{
+	text-align: center;
+	padding: 10px 0;
+}
+dd{
+	margin: 10px;
+}
+label{
+	width: 30%;
+	display: inline-block;
+	color: #11e; 
+	text-align: right;
+	line-height: 30px;
+	float: left;
+	font-weight:bold;
+	font-size: 14px;
+	font-family:Arial, Helvetica; 
+}
+input.text{
+	width: 220px;
+	height:30px;
+	border:1px solid #ccc;
+	background:#fff;
+	font-size:14px;
+	color: #555;
+}
+input.passcode{
+	height: 30px;
+	width: 130px;
+}
+#code{
+	position: relative;
+	top: 10px;
+	cursor: pointer;
+}
+img{
+	margin: 5px 0 5px 10px;	
+	cursor: pointer;
+}
+input[type="radio"]{
+	vertical-align: middle;
+	width:80px;
+	height: 20px;
+}
+input.submit{
+	width: 60px;
+	height: 20px;
+	border: 1px solid #333;
+	backgound: #ddd;
+	margin:  10px 40px;
+}
