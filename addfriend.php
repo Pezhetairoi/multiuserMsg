@@ -54,7 +54,7 @@ if(isset($_GET["action"]) && $_GET["action"] == "add"){
                                 (tg_touser='{$addfriend["fromuser"]}' AND tg_fromuser='{$addfriend["touser"]}')
                                 ");
         if(!!$row2 = $result2->fetch_assoc()){
-            alert_close("You are already friends");
+            alert_close("You are already friends or pending approval.");
         }else{
             //exec add friend operation
             $result3 = $conn->query("INSERT INTO tg_friend

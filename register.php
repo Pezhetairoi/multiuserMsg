@@ -84,9 +84,11 @@ if(isset($_GET["action"]) && $_GET["action"]=="register"){
     $conn->query($q2) or die($conn->error);
     if($conn->affected_rows == 1){
         $conn->close();
+        session_destroy();
         location("Registration successful !", "activate.php?activate=".$reg_info['activate']);
     }else{
-         
+        $conn->close();
+        session_destroy();
         location("Sorry, registration failed !", "register.php");
     }  
 }else{
