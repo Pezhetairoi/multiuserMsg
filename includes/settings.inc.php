@@ -17,7 +17,7 @@ if(!defined('HF')){
             <dt>Account Settings</dt>
             <dd><a href="settings.php">Personal Details</a></dd>
             <dd><a href="settings_edit.php">Edit Info</a></dd>
-            <dd><a href="">Friend Settings</a></dd>
+            <dd><a href="friend_settings.php">Friend Settings</a></dd>
             <dd><a href="check_msg.php">Check Messages</a></dd>
             <dd><a href="">Albums</a></dd>
             <dd><a href="">Personal Details</a></dd>

@@ -57,7 +57,9 @@ if(isset($_GET["action"]) && $_GET["action"] == "delete" && isset($_POST["box"])
 
 //get page divide module
 global $conn;
-page_param("SELECT tg_id FROM tg_msg WHERE tg_touser='{$_COOKIE["username"]}'", 10, $conn);
+page_param("SELECT tg_id 
+            FROM tg_msg 
+            WHERE tg_touser='{$_COOKIE["username"]}'", 10, $conn);
 
 //extract user from db
 $sql2 = "SELECT tg_id, tg_state, tg_fromuser, tg_content, tg_date

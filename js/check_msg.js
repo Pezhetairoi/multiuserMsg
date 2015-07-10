@@ -13,7 +13,7 @@
  	};
  	
  	form.onsubmit = function(){
- 		if(confirm("Do you want to delete these messages?")){
+ 		if(confirm("Do you want to delete these entries?")){
  			return true;
  		}
  		return false;
