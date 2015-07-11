@@ -1,21 +1,74 @@
 @CHARSET "UTF-8";
 
 #list{
-	width: 600px;
+	width: 630px;
 	height:514px;
 	border: 2px solid #ccc;
 	float: right;
 }
 #user{
-	width: 340px;
-	height: 250px;
+	width: 300px;
+	height: 280px;
 	border: 2px solid #ccc;
 	float: left;
 	margin: 0 0 10px 0;
 }
 #pics{
-	width: 340px;
-	height: 250px;
+	width: 300px;
+	height: 220px;
 	border: 2px solid #ccc;
 	float: left;
+}
+
+#user dl{
+	width: 200px;
+	float: left;
+	margin: 10px 0 20px 40px;
+	padding: 1px 0 0 0;
+}
+
+#user dl dt{
+	width: 200px;
+}
+#user dl dt img{
+	margin: 0 auto;
+	display: block;
+}
+
+#user dl dd{
+	text-align: left;
+	text-indent: 16px;
+	font-size: 10px;
+	line-height:20px;
+	letter-spacing: 1.4px;
+	width: 100px;
+	margin-top:5px;
+	float: left;
+}
+#user dl dd a{
+	text-decoration: none;
+}
+#user dl dd.name{
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color: orange;
+	float: none;
+	width: 180px;
+}
+
+#user dl dd.msg{
+	background: url(../../images/x1.gif) no-repeat left center;
+}
+#user dl dd.comment{
+	background: url(../../images/x2.gif) no-repeat left center;
+}
+#user dl dd.friend{
+	background: url(../../images/x3.gif) no-repeat left center;
+}
+#user dl dd.star{
+	background: url(../../images/x4.gif) no-repeat left center;
+}
+#user dl dd.email{
+	width:200px;
 }

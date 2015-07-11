@@ -83,8 +83,16 @@ if(isset($_GET["action"]) && $_GET["action"]=="register"){
                               )";   
     $conn->query($q2) or die($conn->error);
     if($conn->affected_rows == 1){
+        
+        //get id from last query
+        $reg_info["id"] = $conn->insert_id;
+        
         $conn->close();
         session_destroy();
+        
+        //write to xml user details
+        setxml("test.xml", $reg_info);
+        
         location("Registration successful !", "activate.php?activate=".$reg_info['activate']);
     }else{
         $conn->close();

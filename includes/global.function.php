@@ -253,4 +253,70 @@ function content_length($str){
     }
     return $str;
 }
+
+/*
+ * generate xml file to contain user
+ *  details that display on index.php when login
+ */
+function setxml($str, $reg_info){
+    $fp = @fopen("test.xml", 'w');
+    if(!$fp){
+        exit("xml file not exist");
+    }
+    
+    flock($fp, LOCK_EX);
+    
+    $str = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n";
+    fwrite($fp, $str, strlen($str));
+        $str = "<vip>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "\t<id>{$reg_info['id']}</id>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "\t<username>{$reg_info["username"]}</username>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "\t<gender>{$reg_info["gender"]}</gender>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "\t<avatar>{$reg_info["avatar"]}</avatar>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "\t<email>{$reg_info["email"]}</email>\r\n";
+        fwrite($fp, $str, strlen($str));
+        
+        $str = "</vip>";
+        fwrite($fp, $str, strlen($str));
+    flock($fp, LOCK_UN);
+    fclose($fp);
+} 
+
+function getxml($xmlfile){
+    
+    $html = array();
+    
+    if(file_exists($xmlfile)){
+        $xml = file_get_contents($xmlfile);
+    
+        preg_match_all("/<vip>(.*)<\/vip>/s", $xml, $dom);
+    
+        foreach($dom[1] as $value){
+            preg_match_all("/<id>(.*)<\/id>/s", $value, $id);
+            preg_match_all("/<username>(.*)<\/username>/s", $value, $username);
+            preg_match_all("/<gender>(.*)<\/gender>/s", $value, $gender);
+            preg_match_all("/<avatar>(.*)<\/avatar>/s", $value, $avatar);
+            preg_match_all("/<email>(.*)<\/email>/s", $value, $email);
+            $html["id"] = $id[1][0];
+            $html["username"] = $username[1][0];
+            $html["gender"] = $gender[1][0];
+            $html["avatar"] = $avatar[1][0];
+            $html["email"] = $email[1][0];
+        }
+    }else{
+        echo "not exist";
+    }
+    return $html;
+}
+
 ?>

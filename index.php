@@ -18,6 +18,10 @@
     define('SCRIPT','index');
     
     require dirname(__FILE__).'/includes/common.inc.php';
+
+    //read xml file $xml is an array
+    $xml = getxml("test.xml");
+    //print_r($xml);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -25,6 +29,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Your Title</title>
+<script type="text/javascript" src="js/passcode.js"></script>
+<script type="text/javascript" src="js/friend.js"></script>
 <?php 
     require ROOT_PATH."includes/title.inc.php";
 ?>
@@ -38,7 +44,17 @@
 </div>
 
 <div id="user">
-    <h2>New Members</h2>
+    <h2>New Member</h2>
+    <dl>
+        <dd class="name"><?php echo $xml["username"] ?>(<?php echo $xml["gender"]?>)</dd> 
+        
+        <dt><img src='<?php echo $xml["avatar"]?>' alt="<?php echo $xml["avatar"]?>" /></dt>
+        <dd class="msg"><a href="#" name="msg" title = "<?php echo $xml["id"] ?>" >Send Text</a></dd>
+        <dd class="comment">Post Comment</a></dd>
+        <dd class="friend"><a href="#" name="addfriend" title = "<?php echo $xml["id"] ?>" >Add Friend</a></dd>
+        <dd class="star"><a href="#" name="sendstar" title = "<?php echo $xml["id"] ?>" >Send Star</a></dd>
+        <dd class="email">Email: <?php echo $xml["email"]?></dd>
+    </dl>
 </div>
 <div id="pics">
     <h2>Gallery</h2>
