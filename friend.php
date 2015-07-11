@@ -53,8 +53,9 @@ $result2 = $conn->query($sql2) or die(mysqli_error());
    <div id="friend">
         <h2>Friends List</h2>
         <?php 
+            $user_info = array();
             while(!!$rows = $result2->fetch_assoc()){
-                $user_info = array();
+                
                 $user_info["id"] = $rows["tg_id"];
                 $user_info["username"] = $rows["tg_username"];
                 $user_info["avatar"] = $rows["tg_avatar"];
@@ -67,7 +68,7 @@ $result2 = $conn->query($sql2) or die(mysqli_error());
             <dd class="msg"><a href="#" name="msg" title = "<?php echo $user_info['id']?>" >Send Text</a></dd>
             <dd class="comment">Post Comment</a></dd>
             <dd class="friend"><a href="#" name="addfriend" title = "<?php echo $user_info['id']?>" >Add Friend</a></dd>
-            <dd class="flower">Send Star</dd>
+            <dd class="star"><a href="#" name="sendstar" title = "<?php echo $user_info['id'] ?>" >Send Star</a></dd>
         </dl>
         <?php }
             

@@ -98,8 +98,9 @@ $result2 = $conn->query($sql2) or die(mysqli_error());
         <table cellspacing="1">
             <tr><th>Sender</th><th>Content</th><th>Sent at</th><th>State</th><th>Manage</th></tr>
             <?php 
+            $msg_info = array();
             while(!!$rows = $result2->fetch_assoc()){
-                    $msg_info = array();
+                    
                     $msg_info["id"] = $rows["tg_id"];
                     $msg_info["content"] = $rows["tg_content"];
                     $msg_info["fromuser"] = $rows["tg_fromuser"];                 

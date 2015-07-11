@@ -40,7 +40,10 @@ if(isset($_GET["action"]) && $_GET["action"] == "send"){
         $sendmsg["touser"] = mysqli_real_escape_string($conn, $_POST["touser"]);
         $sendmsg["fromuser"] = mysqli_real_escape_string($conn, $_COOKIE["username"]);
         $sendmsg["content"] = checkContent(mysqli_real_escape_string($conn, $_POST["content"]));
-        
+        //cannot add user himself
+        if($sendmsg["touser"] == $sendmsg["fromuser"]){
+            alert_close("You cannot send message to yourself.");
+        }
         //write into db
         $result2 = $conn->query("INSERT INTO tg_msg (
                                     tg_touser,

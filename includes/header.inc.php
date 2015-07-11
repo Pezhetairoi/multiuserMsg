@@ -18,7 +18,7 @@ if(!defined('HF')){
        
         <?php
             if(isset($_COOKIE["username"])){
-                echo '<li><a href="member.php">'.$_COOKIE["username"].'\'s Spot</a></li>';
+                echo '<li>'.$_COOKIE["username"].'\'s Spot</li>';
                 echo "\n";
             }else{
                 

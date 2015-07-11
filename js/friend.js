@@ -4,6 +4,7 @@
  window.onload = function(){
  	var msg = document.getElementsByName('msg');
  	var addfriend= document.getElementsByName('addfriend');
+ 	var sendstar = document.getElementsByName('sendstar');
  	for(var i=0; i<msg.length; i++){
  		msg[i].onclick = function(){
  			centerWindow('msg.php?id='+this.title, 'Message', 250, 500);
@@ -11,7 +12,13 @@
  	}
  	for(var i=0; i<addfriend.length; i++){
  		addfriend[i].onclick = function(){
- 			centerWindow('addfriend.php?id='+this.title, 'Comment', 250, 500);
+ 			centerWindow('addfriend.php?id='+this.title, 'Add Friend', 250, 500);
+ 		}
+ 	}
+ 	
+ 	for(var i=0; i<sendstar.length; i++){
+ 		sendstar[i].onclick = function(){
+ 			centerWindow('sendstar.php?id='+this.title, 'Send Star', 250, 500);
  		}
  	}
  };

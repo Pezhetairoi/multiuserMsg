@@ -21,6 +21,6 @@ if(!defined('HF')){
             <dd><a href="check_msg.php">Check Messages</a></dd>
             <dd><a href="">Albums</a></dd>
             <dd><a href="">Personal Details</a></dd>
-            <dd><a href="">Check Stars</a></dd>
+            <dd><a href="check_star.php">Check Stars</a></dd>
         </dl>      
     </div>
