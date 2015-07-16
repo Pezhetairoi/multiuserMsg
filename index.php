@@ -41,6 +41,17 @@
 ?>
 <div id="list">
     <h2>Archiving List</h2>
+    <a href="post.php" class="post">Write Article</a>
+    <ul class="article">
+        <li class="icon1"><em>Comment(<strong>1</strong>)</em><a href="#"> Lorem Ipsum is simply dummy</a> </li>
+        <li class="icon2"><em>Comment(<strong>3</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a> </li>
+        <li class="icon3"><em>Comment(<strong>22</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a>  </li>
+        <li class="icon4"><em>Comment(<strong>22</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a>  </li>
+        <li class="icon5"><em>Comment(<strong>1</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a> </li>
+        <li class="icon6"><em>Comment(<strong>2</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a>  </li>
+        <li class="icon7"><em>Comment(<strong>3</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a>  </li>
+        <li class="icon8"><em>Comment(<strong>4</strong>)</em> <a href="#"> Lorem Ipsum is simply dummy</a>  </li>
+    </ul>
 </div>
 
 <div id="user">

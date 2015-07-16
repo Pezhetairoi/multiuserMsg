@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+
+#post{
+	width:auto;
+	height: 600px;	
+	position: relative;
+	
+}
+
+#post h2{
+	text-indent: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #222;
+}
+#post dl dd textarea{
+	width: 550px;
+	height: 200px;
+	border: 1px  dashed #333;
+	background: #fff;
+}
+
+#post dl dd #ubb{
+	width: 550px;
+	height: 26px;
+	background: url(../../images/bgMenubar.gif);
+}
+
+#post dl dd #ubb img{
+	display: block;
+	float: left;
+	padding: 0 2px 0 0;
+}
+
+dl{	
+	text-indent: 0;
+	text-align: center;
+	margin: 0 260px;
+	background: silver;
+	position: absolute;
+}
+dt{
+	text-align: center;
+	padding: 10px 0;
+}
+dd{
+	margin: 10px;
+}
+input[type="radio"]{
+ 	margin:1px;
+   vertical-align: baseline;
+}
+
+input.text{
+	width: 550px;
+	height:20px;
+	border:1px solid #ccc;
+	background:#fff;
+	font-size:14px;
+	color: #555;
+	padding: 5px 0;
+}
+input.passcode{
+	height: 30px;
+	width: 130px;
+	
+	margin: 5px 0;
+}
+input.submit{
+	height: 28px;
+	width: 50px;
+	margin-left: 10px;
+}
+#code{
+	position: relative;
+	top: 12px;
+	cursor: pointer;
+}
+img{
+	margin: 5px 0 5px 10px;	
+	cursor: pointer;
+}
+
+

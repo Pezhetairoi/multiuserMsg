@@ -6,6 +6,63 @@
 	border: 2px solid #ccc;
 	float: right;
 }
+#list a.post{
+	display: block;
+	width: 75px;
+	height: 20px;
+	background-color: silver;
+	margin:10px 10px 0 auto;
+	padding: 10px;	
+}
+#list ul.article{
+	padding:15px 80px;
+}
+#list ul.article li{
+	line-height: 30px;
+	border-bottom: 1px dashed #333;
+}
+#list ul.article li a{
+	color: #333;
+}
+#list ul.article li a:hover{
+	color: orange;
+}
+#list ul.article li em{
+	float: right;
+}
+
+#list ul.article li.icon1{
+	background: url(../../images/icon1.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon2{
+	background: url(../../images/icon2.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon3{
+	background: url(../../images/icon3.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon4{
+	background: url(../../images/icon4.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon5{
+	background: url(../../images/icon5.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon6{
+	background: url(../../images/icon6.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon7{
+	background: url(../../images/icon7.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
+#list ul.article li.icon8{
+	background: url(../../images/icon8.gif) no-repeat left center;
+	padding: 0 0 0 20px;
+}
 #user{
 	width: 300px;
 	height: 280px;
