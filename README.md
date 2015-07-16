@@ -9,7 +9,8 @@ Done so far:
 - User can login, manage friend list and messages
 - restrict content size, paging
 ...
-TO DO
+
+---TO DO---
 - publish new thread
 - reply to thread 
 - display threads and reply
