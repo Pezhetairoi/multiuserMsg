@@ -1,7 +1,7 @@
 # multiuserMsg
 A simulation multi-user messaging system extracted from traditional online discussion board using PHP CSS JS XML
 Done so far: 
-- User restration with auto generated passcode 
+- User registration with auto generated passcode 
 - User need to activate their accounts after restration  
 - front-end and beck-end authentication 
 - send messages to each other
