@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+
+#article{
+	width: auto;
+	min-height: 800px;
+	border: 2px solid #ccc;
+}
+#h2{
+	text-indent:2px;
+	
+}
+#subject{
+	
+}
+
+#article #subject dl{
+	width: 200px;
+	float: left;
+	margin: 10px 0 20px 25px;
+	padding: 1px 0 0 0;
+}
+
+#article #subject dl dt{
+	width: 200px;
+}
+#article #subject dl dt img{
+	margin: 0 auto;
+	display: block;
+}
+
+#article #subject dl dd{
+	text-align: left;
+	text-indent: 16px;
+	font-size: 10px;
+	line-height:20px;
+	letter-spacing: 1.4px;
+	width: 100px;
+	margin-top:5px;
+	float: left;
+}
+#article #subject dl dd a{
+	text-decoration: none;
+}
+#article #subject dl dd.name{
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color: orange;
+	float: none;
+	width: 180px;
+}
+
+#article #subject dl dd.msg{
+	background: url(../../images/x1.gif) no-repeat left center;
+}
+#article #subject dl dd.comment{
+	background: url(../../images/x2.gif) no-repeat left center;
+}
+#article #subject dl dd.friend{
+	background: url(../../images/x3.gif) no-repeat left center;
+}
+#article #subject dl dd.star{
+	background: url(../../images/x4.gif) no-repeat left center;
+}
+#article #subject dl dd.email{
+	width:200px;
+}
+
+#article div.content{
+	float: right;
+	width: 700px;
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 5px 0 0;
+}
+#article .content .publisher{
+	border-bottom: 1px dashed #999;
+}
+#article .content .publisher span{
+	color: #f60;
+	float: right;
+}
+#article .content h3{
+	font-size: 14px;
+}
+#article .content h3 img{
+	position: relative;
+	top: 3px;
+	left: 2px;
+}
+
+#article .content .detail{
+	font-size: 14px;
+	line-height: 150%;
+}
+#article .content .read{
+	font-size: 12px;
+	color: #510;
+	font-family: Cursive;
+}
+#article p.line{
+	margin: 0 auto;
+	clear:both;
+	background-color: orange;
+	height: 3px;
+	
+}

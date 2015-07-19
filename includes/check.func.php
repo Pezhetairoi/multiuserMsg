@@ -122,4 +122,17 @@ function checkContent($str){
     }
     return $str;
 }
+
+function check_art_title($str){
+    if(mb_strlen($str,'utf-8') < 2 || mb_strlen($str,'utf-8') > 20){
+        alert_return("Text must between 2 - 20 characters.");
+    }
+    return $str;
+}
+function check_art_content($str){
+    if(mb_strlen($str,'utf-8') < 8){
+        alert_return("Content must not be less than 8 characters.");
+    }
+    return $str;
+}
 ?>

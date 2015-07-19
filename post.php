@@ -14,8 +14,63 @@ define('HF', true);
 //define a constant to specify the css of the current page
 define('SCRIPT','post');
 
-
 require dirname(__FILE__).'/includes/common.inc.php';
+
+if(!isset($_COOKIE["username"])){
+    alert_return("You must log in before publish article");
+}
+
+if(isset($_GET["action"]) && $_GET["action"] == "post") {
+    //varify passcode
+    checkCode($_POST["passcode"], $_SESSION["code"]); 
+    
+    //check if cookie exists
+    $result = $conn->query("SELECT tg_uniqid
+        FROM tg_guest
+        WHERE tg_username = '{$_COOKIE["username"]}'");
+    
+    if(!!$row = $result->fetch_assoc()){
+        //check if uniqid matches
+        //call matchUniqid
+        matchUniqid($row["tg_uniqid"], $_COOKIE["uniqid"]);    
+    }
+    include ROOT_PATH.'includes/check.func.php';
+    //retrieve article details
+    $clean = array();
+    $clean["username"] = $_COOKIE["username"];
+    $clean["type"] = $_POST["type"];
+    $clean["title"] = check_art_title($_POST["title"]);
+    $clean["content"] = check_art_content($_POST["content"]);
+    //write to db
+    //insert new user
+    $sql =
+            "INSERT INTO tg_article (
+                            tg_username,
+                            tg_title,
+                            tg_type,
+                            tg_content,
+                            tg_date
+                            )
+            VALUES (
+                            '{$clean["username"]}',
+                            '{$clean["title"]}',
+                            '{$clean["type"]}',
+                            '{$clean["content"]}',
+                            NOW())";                           
+    $conn->query($sql) or die($conn->error);
+  
+    if($conn->affected_rows == 1){
+        //get id from last query
+        $clean["id"] = $conn->insert_id;   
+        $conn->close();
+        session_destroy();
+        location("Article published!", "article.php?article=".$clean['id']);
+    }else{
+        $conn->close();
+        session_destroy();
+        location("Sorry, Publish failed !", "post.php");
+    }
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -44,38 +99,18 @@ require dirname(__FILE__).'/includes/common.inc.php';
             <dt>Please fill in each of the following:</dt>
             <dd><?php foreach(range(1,8) as $num){
                                         if($num ==1){
-                                            echo '<input type="radio" id="type'.$num.'" name="radio" value="'.$num.'" checked="checked"></input>';
+                                            echo '<input type="radio" id="type'.$num.'" name="type" value="'.$num.'" checked="checked"></input>';
                                         }else{
-                                            echo '<input type="radio" id="type'.$num.'" name="radio" value="'.$num.'" ></input>';            
+                                            echo '<input type="radio" id="type'.$num.'" name="type" value="'.$num.'" ></input>';            
                                         }
                                         echo '<img src="images/icon'.$num.'.gif" class="icon" alt="type"/>  ';
                                     }?></dd>
-            <dd>Subject</dd>
-            <dd><input type="text" name="subject" class="text" /></dd>
+            <dd>Title</dd>
+            <dd><input type="text" name="title" class="text" /></dd>
             
-            <dd>Write something</dd>
+            <dd>Subject</dd>
             <dd>
-                <div id="ubb">
-                    <img src="images/fontsize.gif" title="font size"/>
-                    <img src="images/space.gif"/>
-                    <img src="images/bold.gif" title="bold"/>
-                    <img src="images/italic.gif" title="italic"/>
-                    <img src="images/underline.gif" title=""/>
-                    <img src="images/strikethrough.gif" title="strike through"/>
-                    <img src="images/space.gif"/>
-                    <img src="images/color.gif" title="color"/>
-                    <img src="images/url.gif" title="url"/>
-                    <img src="images/email.gif" title="email"/>
-                    <img src="images/image.gif" title="image" />
-                    <img src="images/movie.gif" title="movie" />
-                    <img src="images/space.gif" />
-                    <img src="images/left.gif" title="left" />
-                    <img src="images/center.gif" title="center" />
-                    <img src="images/right.gif" title="right" />
-                    <img src="images/space.gif" />
-                    <img src="images/increase.gif" title="increase" />
-                    <img src="images/decrease.gif" title="decrease" />
-                </div>
+                <?php include ROOT_PATH.'includes/ubb.inc.php'?>  
                 <textarea name="content" >
                 </textarea></dd>
             <dd><input type="text" name="passcode" class="passcode" />

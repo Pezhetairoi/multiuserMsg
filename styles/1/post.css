@@ -31,7 +31,55 @@
 	float: left;
 	padding: 0 2px 0 0;
 }
-
+#post dl dd #font{
+	display: none;
+	width: 130px;
+	height: 46px;
+	background: #eee;
+	border: 1px dashed #eee;
+	padding: 8px;
+	line-height:20px;
+	position: absolute;
+	top: 210px;
+	left: 11px;
+}
+#post dl dd #font strong{
+	font-weight: normal;
+	background: #fff;
+	display: block;
+	border: 1px solid #ccc;
+	float: left;
+	margin: 2px 0 2px 2px;
+	cursor: default;
+}
+#post dl dd #color{
+	display: none;
+	width: 152px;
+	height: 95px;
+	background: #eee;
+	font-size:12px;
+	float: left;
+	margin-left: 2px;
+	margin-top: 2px;
+	position: absolute;
+	top: 210px;
+	left: 180px;
+}
+#post dl dd #color strong{
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 4px 0 0 4px;
+}
+#post dl dd #color em{
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 4px 0 0 4px;
+}
+#post dl dd #color em input{
+	margin: 4px 0 2px 4px;
+}
 dl{	
 	text-indent: 0;
 	text-align: center;
